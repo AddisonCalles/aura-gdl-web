@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+
+<html lang="es">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -19,22 +21,343 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
+    <title>Aura Party - Diseño de Eventos de Lujo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdea5",
+                        "primary-fixed": "#d6e4f9",
+                        "surface-container-highest": "#e4e2e3",
+                        "navy-deep": "#0D1B2A",
+                        "surface-tint": "#525f71",
+                        "secondary-fixed": "#e5e3d7",
+                        "inverse-on-surface": "#f2f0f1",
+                        "primary-container": "#0f1c2c",
+                        "secondary": "#5f5f56",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0edee",
+                        "on-secondary-container": "#65655c",
+                        "on-tertiary-container": "#a17f3b",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1b1b1d",
+                        "on-primary-fixed": "#0f1c2c",
+                        "cream-foundation": "#F5F3E7",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#44474c",
+                        "secondary-container": "#e5e3d7",
+                        "surface": "#fbf9fa",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-secondary": "#ffffff",
+                        "oxford-grey": "#415A77",
+                        "primary": "#000000",
+                        "on-surface": "#1b1b1d",
+                        "outline-variant": "#c4c6cc",
+                        "tertiary-container": "#261900",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#74777d",
+                        "surface-bright": "#fbf9fa",
+                        "primary-fixed-dim": "#bac8dc",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e3",
+                        "on-tertiary-fixed": "#261900",
+                        "on-secondary-fixed": "#1b1c15",
+                        "on-primary-container": "#778598",
+                        "surface-container-high": "#eae7e9",
+                        "surface-container-low": "#f5f3f4",
+                        "charcoal-text": "#1B263B",
+                        "on-tertiary": "#ffffff",
+                        "champagne-accent": "#C5A059",
+                        "inverse-surface": "#303032",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#47473f",
+                        "background": "#fbf9fa",
+                        "surface-dim": "#dbd9db",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "secondary-fixed-dim": "#c8c7bc",
+                        "inverse-primary": "#bac8dc",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "margin-md": "2.5rem",
+                        "margin-xs": "1rem",
+                        "gutter": "1.5rem",
+                        "margin-lg": "5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-cream-foundation text-navy-deep antialiased font-body-md selection:bg-champagne-accent selection:text-white">
     <noscript>
-      You need to enable JavaScript to run this app.
+        You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <nav class="bg-cream-foundation dark:bg-navy-deep docked full-width top-0 border-b border-oxford-grey/20 z-50">
+        <div
+            class="flex justify-between items-center w-full px-margin-lg max-w-max-width mx-auto h-20 transition-all duration-200 ease-in-out">
+            <div class="flex items-center gap-4">
+                <img alt="Aura Party Logo" class="h-12 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida/ADBb0ug1rw08rOGfjUS8rUQpJzb9IJBEnPTvgse0T2u68wLfxN5brtfnQ7eRZB5JxpQTuQa2_2ovmwN6jGsSKFWEXurqzRCL9wxqMWCZT1-L2lL2aq_BZM0kh2l5EC1dfD1SCmJqidFfeYQhbInLdFs2B0-vyCDjKc20df6NSZjOyK7eaVokvp2dnLNB2YGjGUgKFdWfoS8oI7y7XXFn5YDaPC6CRADikAfmkfmFx1bkt369C57gSdtzBYeUyfyOItQQ3P2MkViPnOYYEaE" />
+                <span
+                    class="font-headline-md text-headline-md tracking-tighter text-navy-deep dark:text-cream-foundation hidden md:block">Aura
+                    Party</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+                <a class="text-oxford-grey dark:text-secondary-fixed-dim hover:text-champagne-accent transition-colors duration-300"
+                    href="#">Portfolio</a>
+                <a class="text-oxford-grey dark:text-secondary-fixed-dim hover:text-champagne-accent transition-colors duration-300"
+                    href="#">Services</a>
+                <a class="text-oxford-grey dark:text-secondary-fixed-dim hover:text-champagne-accent transition-colors duration-300"
+                    href="#">Process</a>
+                <a class="text-oxford-grey dark:text-secondary-fixed-dim hover:text-champagne-accent transition-colors duration-300"
+                    href="#">About</a>
+            </div>
+            <button
+                class="bg-navy-deep text-cream-foundation px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:bg-oxford-grey transition-colors duration-300 shadow-[0_4px_12px_rgba(13,27,42,0.1)]">
+                Inquire Now
+            </button>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <section
+            class="max-w-max-width mx-auto px-margin-xs md:px-margin-lg py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-8">
+                <div
+                    class="inline-block border border-oxford-grey/30 px-4 py-1 rounded-full font-label-md text-label-md text-oxford-grey tracking-widest uppercase">
+                    Guadalajara, MX
+                </div>
+                <h1 class="font-headline-xl text-headline-xl md:text-[64px] leading-tight text-navy-deep">
+                    Diseño de Eventos y Decoración con Globos de Lujo.
+                </h1>
+                <p class="font-body-lg text-body-lg text-oxford-grey max-w-lg">
+                    En Aura Party, transformamos el estrés de la organización en la libertad de celebrar... <br /><br />
+                    <span class="italic text-champagne-accent">"Tú celebra, nosotros creamos el momento."</span>
+                </p>
+            </div>
+            <div class="lg:col-span-6 relative">
+                <div class="absolute -inset-4 bg-surface-container-highest/20 rounded-xl blur-2xl -z-10"></div>
+                <img class="w-full h-[600px] object-cover rounded-xl shadow-[0_20px_40px_rgba(13,27,42,0.08)]"
+                    data-alt="A highly sophisticated event setup in a bright, modern architectural space. A minimalist white table serves as a centerpiece, framed by an organic, free-flowing balloon installation in muted tones of cream, matte grey, and metallic champagne. The lighting is soft and natural, casting delicate ambient shadows. The overall aesthetic is incredibly luxurious, orderly, and serene, completely avoiding any chaotic or overly vibrant party elements. High-end editorial photography style."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiz-Hqoxpge94ByxC2U2QdKq7BOYpoI9x2UGQameO4PYVQInboaLTCWbg-lw9Gy4qL_KTe-tPgBz3gReha0sLZMkimVS2oUJD2GHHvd-VawPY3bZFwe88tqaJSHw-9JvnYbo9iGVMEFwQv_OezX9Ouyw0KXVY9Vq4WQ6Okux378gqVs-KZhzpZOXfNq_h0kX3ZHWEn-7Lzi5yF0XhX_MEsafFZZarwNBX3hcztOwq5mgRj5eY6UPwJgLgmATqdNhRrj6aV-VNOBRJz" />
+            </div>
+        </section>
+        <section class="bg-surface-container-lowest py-24 border-y border-oxford-grey/10">
+            <div class="max-w-max-width mx-auto px-margin-xs md:px-margin-lg">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg text-navy-deep">Nuestros Servicios</h2>
+                    <p class="font-body-md text-body-md text-oxford-grey mt-4">Especialización arquitectónica para
+                        eventos premium.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-cream-foundation p-8 h-[500px] flex flex-col justify-end transition-all duration-500 hover:shadow-[0_12px_32px_rgba(13,27,42,0.06)]">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out"
+                            data-alt="A close-up shot of a premium, custom balloon architectural structure. The balloons are entirely matte and feature a refined color palette of deep navy, soft cream, and subtle gold accents. The arrangement is sculptural and deliberate, seamlessly integrating with the clean lines of a modern indoor venue. Soft, diffused lighting highlights the flawless texture and precise placement of every element, conveying a sense of high-end corporate elegance and meticulous planning."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQYR45fEqW1HVMAjrdKakxK92qsidRb-6MlIw9mMvL-RcpNM19bsKrC2wkqloyOLuCcKNT4VoCqdXjpWKEXKLfn-9jVVFff4C5lYBOo-G3NQy-7LZqLpYBnbli-smYLlOsr2EUj4p0UBsJNwvGC82ozKGCDRlO23YAaBl8qn-Sx7DVT8t_mfh4l7A1vW9h7wKH6doeiTHEgt0Qu-Lnx-qqz9CVxGeNOqJYp2z0uuemjucfpkSVXc5UliFvzYQUNpHbpNZqXSOnX0MJ" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent">
+                        </div>
+                        <div class="relative z-10 text-cream-foundation">
+                            <span class="material-symbols-outlined text-champagne-accent mb-4 text-4xl block"
+                                data-icon="architecture">architecture</span>
+                            <h3 class="font-headline-md text-headline-md mb-2">Diseño con Globos de Autor</h3>
+                            <p class="font-body-md text-body-md text-cream-foundation/80">Estructuras arquitectónicas,
+                                personalización absoluta y calidad premium indiscutible.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container p-8 h-[500px] flex flex-col justify-end transition-all duration-500 hover:shadow-[0_12px_32px_rgba(13,27,42,0.06)]">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out"
+                            data-alt="A pristine, minimalist event lounge area designed with structural elegance. The space features sleek, functional white furniture with geometric lines, perfectly arranged on a light-colored floor. A contemporary, unadorned candy bar support structure stands nearby. The environment is devoid of clutter, emphasizing negative space and tranquility. High-key natural lighting floods the scene, enhancing the pure white surfaces and creating a calming, luxurious atmosphere typical of a high-end concierge service."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_1m5kYptOQ0fOmuax9t4nb4CCuZ-32BqHTYlT3MsU6t02uiXumzpezMIF-InGnRJ3kiQM7hC5YJO8HlX0A2Yaf8P_gQ_uJl3BqFjpqcbsrVyDrYMQEkKzW_utAiudv2cu0NVDDdyOnrBkAss5Ji9etkk8Q_cUaFid7Ks9_pI89gILAFqPlTUiumiJSluLxIatOTHTAfwlDzwlKJ7cjgY8Z--g6J08o59W56XXC4NR-tOsOcUSvxDe-nhLwM3qfHTr72RzARe8lAer" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent">
+                        </div>
+                        <div class="relative z-10 text-cream-foundation">
+                            <span class="material-symbols-outlined text-champagne-accent mb-4 text-4xl block"
+                                data-icon="chair">chair</span>
+                            <h3 class="font-headline-md text-headline-md mb-2">Mobiliario Minimalista y Ambientación
+                            </h3>
+                            <p class="font-body-md text-body-md text-cream-foundation/80">Mobiliario blanco funcional,
+                                soportes para Candy Bar y estructuras modernas que definen el espacio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-max-width mx-auto px-margin-xs md:px-margin-lg py-24">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="font-headline-lg text-headline-lg text-navy-deep mb-4">El Proceso Aura: Tu Paz Mental
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-oxford-grey">Una metodología rigurosa diseñada para
+                        eliminar la incertidumbre. Ejecución perfecta, a tiempo, siempre.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-oxford-grey/20 -z-10"></div>
+                <div
+                    class="bg-cream-foundation/50 backdrop-blur-sm p-8 rounded-xl border border-oxford-grey/10 shadow-[0_4px_24px_rgba(13,27,42,0.02)]">
+                    <div
+                        class="w-16 h-16 bg-navy-deep rounded-full flex items-center justify-center text-champagne-accent mb-8 shadow-md">
+                        <span class="material-symbols-outlined text-2xl" data-icon="event_note">event_note</span>
+                    </div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-wider text-oxford-grey mb-2">Fase 01</h4>
+                    <h3 class="font-headline-md text-headline-md text-navy-deep mb-4">Planeación Estratégica</h3>
+                    <p class="font-body-md text-body-md text-oxford-grey">Iniciamos el diseño y logística con un mínimo
+                        de 2 semanas de anticipación para garantizar disponibilidad y perfección.</p>
+                </div>
+                <div
+                    class="bg-cream-foundation/50 backdrop-blur-sm p-8 rounded-xl border border-oxford-grey/10 shadow-[0_4px_24px_rgba(13,27,42,0.02)]">
+                    <div
+                        class="w-16 h-16 bg-navy-deep rounded-full flex items-center justify-center text-champagne-accent mb-8 shadow-md">
+                        <span class="material-symbols-outlined text-2xl"
+                            data-icon="precision_manufacturing">precision_manufacturing</span>
+                    </div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-wider text-oxford-grey mb-2">Fase 02</h4>
+                    <h3 class="font-headline-md text-headline-md text-navy-deep mb-4">Montaje Profesional</h3>
+                    <p class="font-body-md text-body-md text-oxford-grey">Llegamos 3 horas antes del inicio de tu
+                        evento. El montaje es silencioso, rápido y no requiere tu intervención.</p>
+                </div>
+                <div
+                    class="bg-cream-foundation/50 backdrop-blur-sm p-8 rounded-xl border border-oxford-grey/10 shadow-[0_4px_24px_rgba(13,27,42,0.02)]">
+                    <div
+                        class="w-16 h-16 bg-navy-deep rounded-full flex items-center justify-center text-champagne-accent mb-8 shadow-md">
+                        <span class="material-symbols-outlined text-2xl" data-icon="done_all">done_all</span>
+                    </div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-wider text-oxford-grey mb-2">Fase 03</h4>
+                    <h3 class="font-headline-md text-headline-md text-navy-deep mb-4">Servicio Integral</h3>
+                    <p class="font-body-md text-body-md text-oxford-grey">Nos encargamos del transporte, la instalación
+                        impecable y el desmontaje oportuno. Tú solo llegas a disfrutar.</p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-navy-deep py-32 text-cream-foundation">
+            <div class="max-w-max-width mx-auto px-margin-xs md:px-margin-lg text-center max-w-4xl">
+                <span class="material-symbols-outlined text-champagne-accent text-5xl mb-8 block"
+                    data-icon="diamond">diamond</span>
+                <h2 class="font-headline-lg text-headline-lg mb-8">Elegancia, Detalles y Puntualidad.</h2>
+                <p class="font-body-lg text-body-lg text-secondary-fixed-dim leading-relaxed">
+                    Somos expertos en Styling de eventos. Nuestra filosofía se basa en el minimalismo funcional y la
+                    elegancia corporativa. No hacemos simples decoraciones; diseñamos atmósferas con un rigor logístico
+                    que garantiza que cada elemento esté exactamente donde debe estar, en el momento preciso.
+                </p>
+            </div>
+        </section>
+        <section class="max-w-max-width mx-auto px-margin-xs md:px-margin-lg py-24">
+            <div class="mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-navy-deep">Galería Temática</h2>
+                <p class="font-body-md text-body-md text-oxford-grey mt-2">Nuestras ejecuciones recientes,
+                    reinterpretadas a través de la lente Aura.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <div class="md:col-span-5 relative group overflow-hidden rounded-xl h-[400px] md:h-[600px]">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A sophisticated interpretation of a Minecraft theme for a luxury event. Instead of pixelated chaos, the scene uses clean geometric blocks in muted earth tones, matte greens, and architectural white. A structured balloon garland frames a highly organized dessert table with precise, minimalist presentation. The lighting is crisp and even, highlighting the meticulous styling and premium materials used throughout the modern gallery space."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZHQjJnmjpmZlU2CUBFsEC6TfXhHD1NWwP5kAffurFkcpZkDCLscxCamrb__e4jbBo1KweQKaccykEmOsLBb65eMhl97baX9RvgcKW4IZhbK2OohkhQyGVtu9dhrnuSLQssQfvioQZVKmpTuFqns6v-iWMpld4oRYHRjE8kR7qAQolaHUiztiKYdkQxla5hQvA21PUdfRFc2iHuK38PQlgboyg5pRGYDn65V_gXd98ACAAFE3PjKx3iA1udoS38xOC4sduifqmxnv0" />
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-navy-deep to-transparent">
+                        <p class="font-label-md text-label-md text-champagne-accent">01 // Minecraft Luxury</p>
+                    </div>
+                </div>
+                <div class="md:col-span-7 grid grid-rows-2 gap-4 h-[600px]">
+                    <div class="relative group overflow-hidden rounded-xl h-full">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="An elegant 'Dino-Girl' themed event setup. The color palette features very soft, muted pastels combined with cream and oxford grey. Abstract, sleek dinosaur silhouettes serve as subtle centerpieces on pristine white tables. The balloon artistry is fluid and organic, avoiding bright primary colors, opting instead for a sophisticated, high-end nursery aesthetic. The mood is calm, orderly, and beautifully curated."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-hL5aI9gcLyHIOMNMvmUdVGbXp7SYIRtlCwCDtYwX1jQeGjsBECaCrv35Ij7crkMJY35U8I9b86qn5vFbxRK0XqbkpYAXhB7kXnlj6kpjx9RMzK2gHetx5fRlY_rnul2rR8OwsL64szE-Rv5rzpbrN-6C02ewAHYPd6rtrrCiGjtPCE02wc4sY6o824MdwF8g8_g6mA6spy7p9jYNwOeFHUZPfjkkb1UDtUzq4QEaj2erYQvi9-0_alR4eplRfT1HqnJ4T-CuVR5H" />
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-navy-deep to-transparent">
+                            <p class="font-label-md text-label-md text-champagne-accent">02 // Dino-Girl</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-xl h-full">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A gourmet 'Mis Pastelitos' styled event station. An immaculate, architectural white shelving unit holds perfectly spaced, artisanal pastries. Above it, an exquisite balloon arrangement in soft champagne, matte white, and pale gold creates a luxurious canopy. The setting is completely devoid of clutter, resembling a high-end boutique display rather than a typical party buffet. Natural light reflects off the clean surfaces."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChLw06ds8uTfbtwisfYsjPby6VO8pvgaaSceJVHBbjlYBGve6KiPXhx_XhowL_etLkEzEUcwqq0G7yVmRrXa7NqJvHo7HYVPCX8eLcDFAHxubveZ_279cZ1uq0tByCxnrNipEqoVdX2crqG9OcyJCKxwGBgBhVuxoQGr46eEs_irsCn_gpsmU3pak_fK41anXAN3Z27bf-Va-7dchphAIkZl4QZnXy2KlHUHW4Vomk_4qU6MjWb5uhb_IOStn9zhxuHlwMnSQGEZoX" />
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-navy-deep to-transparent">
+                            <p class="font-label-md text-label-md text-champagne-accent">03 // Mis Pastelitos Gourmet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-surface-container-highest py-32 border-t border-oxford-grey/10">
+            <div class="max-w-2xl mx-auto text-center px-margin-xs">
+                <h2 class="font-headline-lg text-headline-lg text-navy-deep mb-8">¿Lista para impresionar a tus
+                    invitados?</h2>
+                <button
+                    class="bg-navy-deep text-cream-foundation px-8 py-4 rounded-DEFAULT font-label-md text-label-md hover:bg-oxford-grey transition-colors duration-300 shadow-[0_8px_24px_rgba(13,27,42,0.15)] flex items-center gap-2 mx-auto">
+                    <span class="material-symbols-outlined" data-icon="forum">forum</span>
+                    Recibir Asesoría por WhatsApp
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-navy-deep dark:bg-tertiary-container full-width border-t-0">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center w-full px-margin-lg py-margin-md max-w-max-width mx-auto">
+            <div class="font-headline-lg text-headline-lg text-champagne-accent mb-6 md:mb-0">
+                Aura Party
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0 font-body-md text-body-md">
+                <a class="text-secondary-fixed-dim hover:text-champagne-accent transition-colors opacity-90 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="text-secondary-fixed-dim hover:text-champagne-accent transition-colors opacity-90 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="text-secondary-fixed-dim hover:text-champagne-accent transition-colors opacity-90 hover:opacity-100"
+                    href="#">Press Kit</a>
+                <a class="text-secondary-fixed-dim hover:text-champagne-accent transition-colors opacity-90 hover:opacity-100"
+                    href="#">Contact</a>
+            </div>
+            <div class="font-body-md text-body-md text-cream-foundation dark:text-secondary-fixed opacity-70">
+                © 2024 Aura Party. Strategic Logistical Excellence.
+            </div>
+        </div>
+    </footer>
+</body>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
 </html>
